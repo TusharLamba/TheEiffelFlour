@@ -1,5 +1,4 @@
 const { Product } = require("../models/Products");
-const { productValidator } =  require("../middleware/validator-middleware");
 
 const fetchAllProducts = async (req, res, next) => {
   try {
@@ -9,6 +8,7 @@ const fetchAllProducts = async (req, res, next) => {
       result: products
     });
   } catch(err) {
+    console.log(err);
     throw new Error(err.message);
   }
 }

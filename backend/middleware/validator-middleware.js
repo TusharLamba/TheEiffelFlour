@@ -1,4 +1,4 @@
-const validator = require("../helper/validator");
+const validator = require("../utils/validator");
 
 const productValidator = async (req, res, next) => {
 

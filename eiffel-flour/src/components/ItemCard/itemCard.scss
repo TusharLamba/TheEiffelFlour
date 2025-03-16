@@ -1,0 +1,50 @@
+@import '../../assets/scss/colors';
+
+.item-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    padding: 15px;
+    width: 100%;
+
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+
+
+    .item-card-header {
+        
+        .img-placeholder {
+            height: 100px;
+        }
+
+        .item-card-image {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+
+    .item-card-content {
+        align-self: flex-start;
+
+        .name {
+            font-size: 14px;
+            color: $text-color;
+        }
+
+        .desc {
+            font-size: 10px;
+            color: $text-color-caption;
+        }
+    }
+
+    .item-card-footer {
+        align-self: flex-end;
+        margin-top: auto;
+        padding: 8px 0 0 0;
+    }
+}

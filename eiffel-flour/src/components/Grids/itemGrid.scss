@@ -1,0 +1,89 @@
+@import '../../assets/scss/colors';
+
+.menu {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-width: 520px;
+    max-width: 80vw;
+
+    @media (max-width: 1440px) {
+        width: 75vw;
+    }
+
+    @media (max-width: 1024px) {
+        width: 67vw;
+    }
+
+    @media (max-width: 600px) {
+        width: 60vw;
+    }
+
+
+    padding: 50px;
+    margin: auto;
+    background-color: $background-light-grey;
+
+    .grid-arrangers {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: flex-end;
+
+        height: 38px;
+
+    }
+
+    .menu-header {
+        text-decoration: none;
+        font-size: larger;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+
+
+    .menu-grid-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: start;
+
+        @media (max-width: 600px) {
+            justify-content: center;  // center cards when 1 card per row
+        }
+
+
+       // max-width: 960px;
+        width: 100%;
+        margin: 30px auto 50px auto;
+        gap: 6%;
+
+    
+
+        .menu-grid-item {
+            max-width: 290px;
+            box-sizing: border-box;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            //flex-grow: 0; - default  // don't want cards to take up remaining space
+            flex-basis: calc((100% - 18%) / 4);  // 4 cards per row, by default
+
+            margin-bottom: 25px;
+
+            @media (max-width: 1440px) {
+                flex-basis: calc((100% - 12%) / 3); // 3 cards when screen size is less than 1440px
+            }
+
+            @media (max-width: 1024px) {
+                flex-basis: calc((100% - 6%) / 2);  // 2 cards per row
+            }
+
+            @media (max-width: 600px) {
+                flex-basis: 100%;  // 1 card in each row
+            }
+
+            display: flex; // for children to use flex properties
+        }
+    }
+}

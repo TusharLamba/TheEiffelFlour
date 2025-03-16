@@ -1,0 +1,6 @@
+@use './colors';
+@import '~bootstrap/scss/bootstrap';
+
+p, ul {
+    margin-top: revert;
+}

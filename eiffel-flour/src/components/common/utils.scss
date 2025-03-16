@@ -1,0 +1,106 @@
+@import '../../assets/scss/colors';
+
+.item-search {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    flex: 0 1 120px;  // itself a flex item of grid arrangers
+
+
+    width: fit-content;
+    
+    padding: 5px;
+
+    border: none;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.15);
+    background-color: white;
+    border-radius: 3px;
+    box-sizing: border-box;
+
+    &:focus-within {
+        box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    .item-search-btn {
+        border: none;
+        background: none;
+
+        font-size: 15px;
+        align-self: flex-start;
+        outline: none;
+        cursor: pointer;
+    }
+
+    .item-search-input {
+        color: rgb(97, 97, 97);
+        border: none;
+        background: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .item-search-reset {
+        border: none;
+        background: none;
+
+        align-self: center;
+        font-size: 15px;
+        outline: none;
+        cursor: pointer;
+    }
+
+}
+
+
+// ItemSort comp
+.item-sort {
+    height: 38px;
+
+    flex: 0 1 50px;
+
+    .item-sort-asc, .item-sort-desc {
+
+        svg {
+            vertical-align: revert;
+        }
+    }
+}
+
+// login register button group
+.login-register {
+    display: grid;
+
+    position: absolute;
+    top: 100%;
+    right: 40%;
+
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.15);
+    z-index: 1;
+
+    grid-template-rows: 70px 70px;
+    grid-template-columns: 200px;
+    padding: 10px;
+
+    .login-btn, .register-btn {
+        background-color: $dark-bg-color;
+        border: none;
+        width: 180px;
+        height: 50px;
+        justify-self: center;
+        align-self: center;
+
+    }
+
+    .login-btn:hover, .register-btn:hover {
+        background-color: $focus-color;
+        box-shadow: 0 4px 6px 0 $highlight-color;
+    }
+
+}

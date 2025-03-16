@@ -1,27 +1,49 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Menu from './components/Menu';
-import LoginPage from './components/Login';
-import { AuthProvider } from './context/authContext';
+import Provider from './context/Provider';
+import Register from './components/Register/register';
+import Login from './components/Login/login';
+import Navbar from './components/Navbar/navbar';
+import CartPage from './components/cart/cartPage';
+import Landing from './components/Landing/landing';
+import { ToastContainer, Bounce } from 'react-toastify';
+
+
+import './index.css';
+import './assets/scss/main.scss';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <React.StrictMode>
-    <AuthProvider>
+
+    <Provider>
       <BrowserRouter>
+      <App>
+        <Navbar />
         <Routes>
-          <Route index element={<App />} />
-          <Route path="login" element={<LoginPage />} />
-          <Route path="menu" element={<Menu />} />
+          <Route index path='/' element={<Landing />} />
+          <Route path='/register'  element={<Register />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/cart' element={<CartPage />} />
         </Routes>
+
+        <ToastContainer id="myContainer" 
+            position='bottom-right'
+            autoClose={5000}
+            hideProgressBar={false}
+            closeOnClick
+            pauseOnHover={true}
+            theme='light'
+            transition={Bounce}
+            limit={3} 
+        />
+      </App>
       </BrowserRouter>
-    </AuthProvider>
-  </React.StrictMode>
+    </Provider>
+
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,0 +1,114 @@
+@import '../../assets/scss/colors';
+
+/* loginForm.scss */
+.login-container {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    width: 80%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 20px;
+    background: $background-light-grey; /* Placeholder color; replace with the gradient shown in the image */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px);
+  
+    .login-form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+  
+      .form-group {
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+  
+        label {
+          margin-bottom: 5px;
+        }
+  
+        input[type="text"],
+        input[type="password"] {
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+        }
+
+        .login-pass {
+          position: relative;
+          display: flex;
+
+          input {
+            padding-right: 30px;
+            width: 100%;
+          }
+          button {
+            position: absolute; 
+            right: 5px; // Adjust as needed
+            top: 50%;
+            transform: translateY(-50%);
+            border: none;
+            background: transparent;
+          }
+        }
+      }
+  
+      .login-button {
+        padding: 10px;
+        background: $button-clr-light; /* Placeholder color; replace with the green shade shown in the image */
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 20px;
+  
+        &:hover {
+          background: $focus-color; /* Darker shade for hover effect */
+        }
+
+        &:disabled,
+        &[disabled] {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+      }
+  
+      .form-footer {
+        text-align: center;
+        margin-top: 20px;
+  
+        a {
+          text-decoration: none;
+          color: $focus-color /* Green shade for links */
+        }
+      }
+    }
+
+    .success-msg {
+      text-align: center;
+      background-color: #e6fbef;
+      border-radius: 3px;
+      border: 1px solid green;
+      color: green;
+      margin: 25px 0;
+      padding: 10px;
+      width: fit-content;
+    }
+
+    .failure-msg {
+      text-align: center;
+      background-color: rgb(254, 222, 222);
+      border: 1px solid red;
+      border-radius: 3px;
+      color: red;
+      margin: 25px 0;
+      padding: 10px;
+      width: fit-content;
+    }
+  }

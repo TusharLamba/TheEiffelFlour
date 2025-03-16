@@ -1,0 +1,21 @@
+.cover-banner {
+
+    // background-image: url('../../assets/images/brownie-cover.jpg');
+    // background-size: contain;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    width: 100%;
+    max-height: 60vh; /* 60% of viewport height */
+    overflow: hidden;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+}

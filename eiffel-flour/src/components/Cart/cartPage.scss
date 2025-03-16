@@ -1,0 +1,167 @@
+@import '../../assets/scss/colors';
+
+.cart-page {
+
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+
+
+    .left-pane {
+        width: 60vw;
+        flex: 1 1 540px;
+        min-width: 540px;
+
+        .cart-item-list {
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            
+            margin-left: 30px;
+            
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            
+            .hr-dividor {
+                margin: 20px 0 20px 0;
+                width: 95%;
+                border: 1px $text-color solid;  
+            }
+
+            .cart-item-card {
+
+
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                box-sizing: border-box;
+
+                padding: 15px;
+                width: 100%;
+                height: 180px;
+
+                .cart-item-content {
+
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                            
+                    .cart-item-img {
+
+                        // flexible image section
+                        flex: 1 1 200px;
+
+                        img {
+                            max-width: 100%;
+                            width: auto;
+                            height: 150px;
+                            object-fit: cover;
+                        }
+
+                        .img-placeholder {
+                            
+                            height: 150px;
+                            width: 200px;
+                            
+                        }
+                    }
+
+                    .cart-item-info {
+
+                        // static info section with no shrinking/ growing
+                        flex: 0 0 240px;
+
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        box-sizing: border-box;
+                        padding-left: 15px;
+                        width: 240px;
+
+                        .name {
+                            align-self: flex-start;
+                            font-size: 18px;
+                            color: $text-color;
+                            margin: 0;
+                        }
+                        .description {
+                            font-size: 12px;
+                            color: $text-color-caption;
+                            margin: 0;
+                        }
+                        .price {
+                            font-size: 14px;
+                            color: $text-color;
+                            font-weight: 600;
+                            margin-top: 10px;
+                        }
+                        .quantity {
+                            margin: 0;
+                        }
+                    }
+                }
+
+                .cart-item-action {
+
+                    padding: 5px;
+
+                    .clear-cart-item {
+                        border: none;
+                        border-radius: 3px;
+                        background-color: lightgray;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    .right-pane {
+        width: 30vw;
+        flex: 1 1 270px;
+        min-width: 270px;
+
+        .order-details {
+
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+            margin-right: 30px;
+
+            .order-item {
+                display: flex;
+                justify-content: space-between;
+                padding: 5px 0;
+            }
+
+            .order-total {
+                display: flex;
+                justify-content: space-between;
+                font-weight: bold;
+                margin-top: 10px;
+            }
+
+            .order-checkout-btn {
+                background-color: $button-color;  
+                color: white;
+                border: none;
+                padding: 10px;
+                border-radius: 5px;
+                cursor: pointer;
+                width: 200px;
+                position: relative;
+                left: calc(50% - 100px);
+                margin-top: 20px;
+            }
+        }
+    }
+}

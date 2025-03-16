@@ -59,7 +59,7 @@ class Product {
   static getAllProducts = async () => {
     try {
       const resp = await db.query(
-        `SELECT product_name, description, max_qty, available, size, category_code, price FROM product`,
+        `SELECT product_id, product_name, description, max_qty, available, size, category_code, price FROM product`,
         []
       )
       return resp.rows;

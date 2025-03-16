@@ -1,0 +1,68 @@
+// navbar.scss
+@import '../../assets/scss/colors';
+
+.app-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $dark-bg-color;
+    padding: 0.2rem 2.5rem;
+    color: white;
+
+    gap: 20px;
+  
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  
+    .app-nav-links {
+      display: flex;
+      justify-content: space-evenly;
+      padding-inline-start: 0;
+      margin-top: revert;
+      //align-items: center;
+
+      li {
+        flex-grow: 1;
+        list-style-type: none;
+        text-align: center;
+        align-items: center;
+        
+        a {
+            display: block;
+            padding: 8px 10px 10px 10px;
+            color: white;
+            text-decoration: none;
+
+            &:hover {
+                background-color: $highlight-color;
+                border-radius: 3px;
+              }
+        }
+      }
+    }
+  
+    .nav-icons {
+      .nav-btn {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.2rem;
+        padding: 10px;
+        cursor: pointer;
+        position: relative;
+
+        .shopping-bag-badge {
+            font-size: 10px;
+            position: absolute;
+            top: 3px;
+            right: -1px;
+        }
+  
+        &:hover {
+          color: #a1a1a1;
+        }
+      }
+    }
+  }

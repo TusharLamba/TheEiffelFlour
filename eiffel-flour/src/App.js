@@ -1,10 +1,29 @@
-import React from 'react';
-import LoginPage from './components/Login/index.js';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const App = () => {
+import 'react-toastify/dist/ReactToastify.css';
+
+import './App.scss';
+
+function useResetOnHotReload() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (module.hot) {
+      module.hot.accept(() => {
+        navigate('/');
+      });
+    }
+  }, [navigate]);
+}
+
+
+const App = ({ children }) => {
+  useResetOnHotReload();
+
   return (
     <div className='app'>
-      <LoginPage />
+        {children}
     </div>
   )
 }
